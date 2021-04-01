@@ -15,6 +15,10 @@
 		5C64CF3825F1196900D88FB5 /* PicsumPhotosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C64CF3725F1196900D88FB5 /* PicsumPhotosUITests.swift */; };
 		5C64CF4A25F11ECD00D88FB5 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5C64CF4925F11ECD00D88FB5 /* Kingfisher */; };
 		5C64CF5225F1207900D88FB5 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C64CF5125F1207900D88FB5 /* DashboardViewModel.swift */; };
+		5CAF6EE1260F852100DCB6F4 /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAF6EE0260F852100DCB6F4 /* PhotoService.swift */; };
+		5CAF6EE9260F859900DCB6F4 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAF6EE8260F859900DCB6F4 /* Network.swift */; };
+		5CAF6EEF260F87CD00DCB6F4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5CAF6EEE260F87CD00DCB6F4 /* Alamofire */; };
+		5CEEA8312615BA6700E6BD19 /* PicsumPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEEA8302615BA6700E6BD19 /* PicsumPhoto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,9 @@
 		5C64CF3725F1196900D88FB5 /* PicsumPhotosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumPhotosUITests.swift; sourceTree = "<group>"; };
 		5C64CF3925F1196900D88FB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C64CF5125F1207900D88FB5 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		5CAF6EE0260F852100DCB6F4 /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
+		5CAF6EE8260F859900DCB6F4 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		5CEEA8302615BA6700E6BD19 /* PicsumPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumPhoto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C64CF4A25F11ECD00D88FB5 /* Kingfisher in Frameworks */,
+				5CAF6EEF260F87CD00DCB6F4 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,12 +107,12 @@
 		5C64CF1925F1196800D88FB5 /* PicsumPhotos */ = {
 			isa = PBXGroup;
 			children = (
+				5CAF6EDF260F84DA00DCB6F4 /* Data */,
+				5CAF6EDE260F84C200DCB6F4 /* UI */,
 				5C64CF1A25F1196800D88FB5 /* PicsumPhotosApp.swift */,
-				5C64CF1C25F1196800D88FB5 /* DashboardView.swift */,
 				5C64CF1E25F1196900D88FB5 /* Assets.xcassets */,
 				5C64CF2325F1196900D88FB5 /* Info.plist */,
 				5C64CF2025F1196900D88FB5 /* Preview Content */,
-				5C64CF5125F1207900D88FB5 /* DashboardViewModel.swift */,
 			);
 			path = PicsumPhotos;
 			sourceTree = "<group>";
@@ -135,6 +143,25 @@
 			path = PicsumPhotosUITests;
 			sourceTree = "<group>";
 		};
+		5CAF6EDE260F84C200DCB6F4 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5C64CF1C25F1196800D88FB5 /* DashboardView.swift */,
+				5C64CF5125F1207900D88FB5 /* DashboardViewModel.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		5CAF6EDF260F84DA00DCB6F4 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5CAF6EE0260F852100DCB6F4 /* PhotoService.swift */,
+				5CAF6EE8260F859900DCB6F4 /* Network.swift */,
+				5CEEA8302615BA6700E6BD19 /* PicsumPhoto.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,6 +180,7 @@
 			name = PicsumPhotos;
 			packageProductDependencies = (
 				5C64CF4925F11ECD00D88FB5 /* Kingfisher */,
+				5CAF6EEE260F87CD00DCB6F4 /* Alamofire */,
 			);
 			productName = PicsumPhotos;
 			productReference = 5C64CF1725F1196800D88FB5 /* PicsumPhotos.app */;
@@ -227,6 +255,7 @@
 			mainGroup = 5C64CF0E25F1196800D88FB5;
 			packageReferences = (
 				5C64CF4825F11ECD00D88FB5 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				5CAF6EED260F87CD00DCB6F4 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 5C64CF1825F1196800D88FB5 /* Products */;
 			projectDirPath = "";
@@ -270,9 +299,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CAF6EE9260F859900DCB6F4 /* Network.swift in Sources */,
+				5CAF6EE1260F852100DCB6F4 /* PhotoService.swift in Sources */,
 				5C64CF5225F1207900D88FB5 /* DashboardViewModel.swift in Sources */,
 				5C64CF1D25F1196800D88FB5 /* DashboardView.swift in Sources */,
 				5C64CF1B25F1196800D88FB5 /* PicsumPhotosApp.swift in Sources */,
+				5CEEA8312615BA6700E6BD19 /* PicsumPhoto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +628,14 @@
 				minimumVersion = 6.1.1;
 			};
 		};
+		5CAF6EED260F87CD00DCB6F4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -603,6 +643,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5C64CF4825F11ECD00D88FB5 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		5CAF6EEE260F87CD00DCB6F4 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5CAF6EED260F87CD00DCB6F4 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

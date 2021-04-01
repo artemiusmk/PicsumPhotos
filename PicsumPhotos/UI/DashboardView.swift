@@ -10,7 +10,7 @@ import Kingfisher
 
 struct DashboardView: View {
     
-    var viewModel = DashboardViewModel()
+    @ObservedObject var viewModel = DashboardViewModel()
     
     var body: some View {
         List(viewModel.items) { item in
