@@ -8,15 +8,20 @@
 import Foundation
 import Combine
 
+struct PhotoPage: Codable {
+    let page: Int
+    let data: [PicsumPhoto]
+}
+
 protocol PhotoFetching {
-    func photos() -> AnyPublisher<[PicsumPhoto], Error>
+    func photos(page: Int) -> AnyPublisher<PhotoPage, Error>
 }
 
 struct PhotoService {
     
     let network: PhotoFetching
     
-    func photos() -> AnyPublisher<[PicsumPhoto], Error> {
-        network.photos()
+    func photos(page: Int) -> AnyPublisher<PhotoPage, Error> {
+        network.photos(page: page)
     }
 }

@@ -22,6 +22,11 @@ struct DashboardView: View {
                     ImageOverlay(author: item.author),
                     alignment: .bottomLeading
                 )
+                .onAppear {
+                    if item == viewModel.items.last {
+                        viewModel.fetchPhotos()
+                    }
+                }
         }
     }
 }
