@@ -23,5 +23,7 @@ struct PhotoService {
     
     func photos(page: Int) -> AnyPublisher<PhotoPage, Error> {
         network.photos(page: page)
+            .subscribe(on: DispatchQueue.global())
+            .eraseToAnyPublisher()
     }
 }

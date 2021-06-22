@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		5C566BD726827DE00028CD65 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C566BD626827DE00028CD65 /* DetailsView.swift */; };
+		5C566BDD268283620028CD65 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C566BD9268283620028CD65 /* AppState.swift */; };
+		5C566BE0268283620028CD65 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C566BDC268283620028CD65 /* AppStore.swift */; };
+		5C566BE5268285250028CD65 /* DetailsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C566BE2268285250028CD65 /* DetailsReducer.swift */; };
+		5C566BE6268285250028CD65 /* DashboardReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C566BE3268285250028CD65 /* DashboardReducer.swift */; };
+		5C566BE7268285250028CD65 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C566BE4268285250028CD65 /* AppReducer.swift */; };
+		5C566BEC2682858F0028CD65 /* DashboardAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C566BE92682858F0028CD65 /* DashboardAction.swift */; };
+		5C566BED2682858F0028CD65 /* DetailsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C566BEA2682858F0028CD65 /* DetailsAction.swift */; };
+		5C566BEE2682858F0028CD65 /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C566BEB2682858F0028CD65 /* AppAction.swift */; };
+		5C566BF52682870E0028CD65 /* DashboardMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C566BF22682870E0028CD65 /* DashboardMiddleware.swift */; };
 		5C64CF1B25F1196800D88FB5 /* PicsumPhotosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C64CF1A25F1196800D88FB5 /* PicsumPhotosApp.swift */; };
 		5C64CF1D25F1196800D88FB5 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C64CF1C25F1196800D88FB5 /* DashboardView.swift */; };
 		5C64CF1F25F1196900D88FB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C64CF1E25F1196900D88FB5 /* Assets.xcassets */; };
@@ -15,7 +24,6 @@
 		5C64CF2D25F1196900D88FB5 /* PicsumPhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C64CF2C25F1196900D88FB5 /* PicsumPhotosTests.swift */; };
 		5C64CF3825F1196900D88FB5 /* PicsumPhotosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C64CF3725F1196900D88FB5 /* PicsumPhotosUITests.swift */; };
 		5C64CF4A25F11ECD00D88FB5 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5C64CF4925F11ECD00D88FB5 /* Kingfisher */; };
-		5C64CF5225F1207900D88FB5 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C64CF5125F1207900D88FB5 /* DashboardViewModel.swift */; };
 		5CAF6EE1260F852100DCB6F4 /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAF6EE0260F852100DCB6F4 /* PhotoService.swift */; };
 		5CAF6EE9260F859900DCB6F4 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAF6EE8260F859900DCB6F4 /* Network.swift */; };
 		5CAF6EEF260F87CD00DCB6F4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5CAF6EEE260F87CD00DCB6F4 /* Alamofire */; };
@@ -41,6 +49,15 @@
 
 /* Begin PBXFileReference section */
 		5C566BD626827DE00028CD65 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		5C566BD9268283620028CD65 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		5C566BDC268283620028CD65 /* AppStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
+		5C566BE2268285250028CD65 /* DetailsReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsReducer.swift; sourceTree = "<group>"; };
+		5C566BE3268285250028CD65 /* DashboardReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardReducer.swift; sourceTree = "<group>"; };
+		5C566BE4268285250028CD65 /* AppReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		5C566BE92682858F0028CD65 /* DashboardAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardAction.swift; sourceTree = "<group>"; };
+		5C566BEA2682858F0028CD65 /* DetailsAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsAction.swift; sourceTree = "<group>"; };
+		5C566BEB2682858F0028CD65 /* AppAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
+		5C566BF22682870E0028CD65 /* DashboardMiddleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardMiddleware.swift; sourceTree = "<group>"; };
 		5C64CF1725F1196800D88FB5 /* PicsumPhotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicsumPhotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C64CF1A25F1196800D88FB5 /* PicsumPhotosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumPhotosApp.swift; sourceTree = "<group>"; };
 		5C64CF1C25F1196800D88FB5 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
@@ -53,7 +70,6 @@
 		5C64CF3325F1196900D88FB5 /* PicsumPhotosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PicsumPhotosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C64CF3725F1196900D88FB5 /* PicsumPhotosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumPhotosUITests.swift; sourceTree = "<group>"; };
 		5C64CF3925F1196900D88FB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5C64CF5125F1207900D88FB5 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		5CAF6EE0260F852100DCB6F4 /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
 		5CAF6EE8260F859900DCB6F4 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		5CEEA8302615BA6700E6BD19 /* PicsumPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumPhoto.swift; sourceTree = "<group>"; };
@@ -86,6 +102,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C566BD82682830B0028CD65 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5C566BD9268283620028CD65 /* AppState.swift */,
+				5C566BDC268283620028CD65 /* AppStore.swift */,
+				5C64CF1A25F1196800D88FB5 /* PicsumPhotosApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5C566BE1268285000028CD65 /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				5C566BE4268285250028CD65 /* AppReducer.swift */,
+				5C566BE2268285250028CD65 /* DetailsReducer.swift */,
+				5C566BE3268285250028CD65 /* DashboardReducer.swift */,
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		5C566BE8268285790028CD65 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				5C566BEB2682858F0028CD65 /* AppAction.swift */,
+				5C566BEA2682858F0028CD65 /* DetailsAction.swift */,
+				5C566BE92682858F0028CD65 /* DashboardAction.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		5C566BEF268286E00028CD65 /* Middlewares */ = {
+			isa = PBXGroup;
+			children = (
+				5C566BF22682870E0028CD65 /* DashboardMiddleware.swift */,
+			);
+			path = Middlewares;
+			sourceTree = "<group>";
+		};
 		5C64CF0E25F1196800D88FB5 = {
 			isa = PBXGroup;
 			children = (
@@ -109,12 +163,15 @@
 		5C64CF1925F1196800D88FB5 /* PicsumPhotos */ = {
 			isa = PBXGroup;
 			children = (
+				5C566BE8268285790028CD65 /* Actions */,
+				5C566BD82682830B0028CD65 /* App */,
 				5CAF6EDF260F84DA00DCB6F4 /* Data */,
+				5C566BEF268286E00028CD65 /* Middlewares */,
+				5C566BE1268285000028CD65 /* Reducers */,
 				5CAF6EDE260F84C200DCB6F4 /* UI */,
-				5C64CF1A25F1196800D88FB5 /* PicsumPhotosApp.swift */,
-				5C64CF1E25F1196900D88FB5 /* Assets.xcassets */,
-				5C64CF2325F1196900D88FB5 /* Info.plist */,
 				5C64CF2025F1196900D88FB5 /* Preview Content */,
+				5C64CF2325F1196900D88FB5 /* Info.plist */,
+				5C64CF1E25F1196900D88FB5 /* Assets.xcassets */,
 			);
 			path = PicsumPhotos;
 			sourceTree = "<group>";
@@ -149,7 +206,6 @@
 			isa = PBXGroup;
 			children = (
 				5C64CF1C25F1196800D88FB5 /* DashboardView.swift */,
-				5C64CF5125F1207900D88FB5 /* DashboardViewModel.swift */,
 				5C566BD626827DE00028CD65 /* DetailsView.swift */,
 			);
 			path = UI;
@@ -302,12 +358,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C566BE6268285250028CD65 /* DashboardReducer.swift in Sources */,
+				5C566BE5268285250028CD65 /* DetailsReducer.swift in Sources */,
 				5CAF6EE9260F859900DCB6F4 /* Network.swift in Sources */,
 				5C566BD726827DE00028CD65 /* DetailsView.swift in Sources */,
 				5CAF6EE1260F852100DCB6F4 /* PhotoService.swift in Sources */,
-				5C64CF5225F1207900D88FB5 /* DashboardViewModel.swift in Sources */,
+				5C566BDD268283620028CD65 /* AppState.swift in Sources */,
+				5C566BE7268285250028CD65 /* AppReducer.swift in Sources */,
+				5C566BEE2682858F0028CD65 /* AppAction.swift in Sources */,
+				5C566BED2682858F0028CD65 /* DetailsAction.swift in Sources */,
 				5C64CF1D25F1196800D88FB5 /* DashboardView.swift in Sources */,
 				5C64CF1B25F1196800D88FB5 /* PicsumPhotosApp.swift in Sources */,
+				5C566BEC2682858F0028CD65 /* DashboardAction.swift in Sources */,
+				5C566BF52682870E0028CD65 /* DashboardMiddleware.swift in Sources */,
+				5C566BE0268283620028CD65 /* AppStore.swift in Sources */,
 				5CEEA8312615BA6700E6BD19 /* PicsumPhoto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

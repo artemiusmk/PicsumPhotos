@@ -10,22 +10,28 @@ import Kingfisher
 
 struct PhotoInfo: View {
     
-    @Binding var selectedId: String?
-    
-    let photo: PicsumPhoto
+    @EnvironmentObject var store: AppStore
     
     var body: some View {
-        KFImage(photo.displayUrl)
+        KFImage(store.state.details.data?.displayUrl)
             .resizable()
             .blur(radius: 20.0)
             .overlay(
-                KFImage(photo.downloadUrl)
+                KFImage(store.state.details.data?.downloadUrl)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
             )
             .ignoresSafeArea()
             .onTapGesture {
-                selectedId = nil
+                close()
             }
     }
+}
+
+extension PhotoInfo {
+
+    func close() {
+        store.dispatch(.details(action: .close))
+    }
+
 }

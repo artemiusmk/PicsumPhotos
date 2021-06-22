@@ -10,14 +10,16 @@ import Kingfisher
 
 struct DashboardView: View {
     
-    @ObservedObject private var viewModel = DashboardViewModel()
+    @EnvironmentObject var store: AppStore
     
-    @State private var selectedId: String?
+//    @ObservedObject private var viewModel = DashboardViewModel()
+//
+//    @State private var selectedId: String?
     
     var body: some View {
         ScrollView {
             LazyVStack {
-                ForEach(viewModel.items) { item in
+                ForEach(store.state.dashboard.items) { item in
                     KFImage(item.displayUrl)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -28,26 +30,39 @@ struct DashboardView: View {
                         )
                         .frame(height: UIScreen.main.bounds.size.width * CGFloat(0.6))
                         .onAppear {
-                            if item == viewModel.items.last {
-                                viewModel.fetchPhotos()
+                            if item == store.state.dashboard.items.last {
+                                fetchPhotos()
                             }
                         }
-                        .popover(isPresented: selectedItem(item)) {
-                            PhotoInfo(selectedId: $selectedId, photo: item)
+                        .popover(isPresented: isPresented()) {
+                            PhotoInfo()
                         }
                         .onTapGesture {
-                            selectedId = item.id
+                            openDetails(id: item.id)
                         }
                 }
             }
         }
     }
     
-    func selectedItem(_ item: PicsumPhoto) -> Binding<Bool> {
+    func isPresented() -> Binding<Bool> {
         .init(get: {
-            selectedId == item.id
+            store.state.details.data != nil
         }, set: { _ in })
     }
+    
+}
+
+extension DashboardView {
+    
+    func fetchPhotos() {
+        store.dispatch(.dashboard(action: .fetchPhotos))
+    }
+
+    func openDetails(id: String) {
+        store.dispatch(.dashboard(action: .openDetails(id: id)))
+    }
+
 }
 
 struct ImageOverlay: View {
