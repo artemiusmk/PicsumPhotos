@@ -12,22 +12,41 @@ struct DashboardView: View {
     
     @ObservedObject var viewModel = DashboardViewModel()
     
+    @State private var selectedId: String?
+    
     var body: some View {
-        List(viewModel.items) { item in
-            KFImage(item.displayUrl)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .cornerRadius(8.0)
-                .overlay(
-                    ImageOverlay(author: item.author),
-                    alignment: .bottomLeading
-                )
-                .onAppear {
-                    if item == viewModel.items.last {
-                        viewModel.fetchPhotos()
-                    }
+        ScrollView {
+            LazyVStack {
+                ForEach(viewModel.items) { item in
+                    KFImage(item.displayUrl)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .cornerRadius(8.0)
+                        .overlay(
+                            ImageOverlay(author: item.author),
+                            alignment: .bottomLeading
+                        )
+                        .frame(height: UIScreen.main.bounds.size.width * CGFloat(0.6))
+                        .onAppear {
+                            if item == viewModel.items.last {
+                                viewModel.fetchPhotos()
+                            }
+                        }
+                        .popover(isPresented: selectedItem(item)) {
+                            PhotoInfo(selectedId: $selectedId, photo: item)
+                        }
+                        .onTapGesture {
+                            selectedId = item.id
+                        }
                 }
+            }
         }
+    }
+    
+    func selectedItem(_ item: PicsumPhoto) -> Binding<Bool> {
+        .init(get: {
+            selectedId == item.id
+        }, set: { _ in })
     }
 }
 
@@ -46,6 +65,22 @@ struct ImageOverlay: View {
         .opacity(0.7)
         .cornerRadius(16.0)
         .padding(10)
+    }
+}
+
+struct PhotoInfo: View {
+    
+    @Binding var selectedId: String?
+    
+    let photo: PicsumPhoto
+    
+    var body: some View {
+        KFImage(photo.downloadUrl)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .onTapGesture {
+                selectedId = nil
+            }
     }
 }
 
