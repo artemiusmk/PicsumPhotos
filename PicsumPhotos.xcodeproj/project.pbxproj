@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C566BD726827DE00028CD65 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C566BD626827DE00028CD65 /* DetailsView.swift */; };
 		5C64CF1B25F1196800D88FB5 /* PicsumPhotosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C64CF1A25F1196800D88FB5 /* PicsumPhotosApp.swift */; };
 		5C64CF1D25F1196800D88FB5 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C64CF1C25F1196800D88FB5 /* DashboardView.swift */; };
 		5C64CF1F25F1196900D88FB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C64CF1E25F1196900D88FB5 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C566BD626827DE00028CD65 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		5C64CF1725F1196800D88FB5 /* PicsumPhotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicsumPhotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C64CF1A25F1196800D88FB5 /* PicsumPhotosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumPhotosApp.swift; sourceTree = "<group>"; };
 		5C64CF1C25F1196800D88FB5 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			children = (
 				5C64CF1C25F1196800D88FB5 /* DashboardView.swift */,
 				5C64CF5125F1207900D88FB5 /* DashboardViewModel.swift */,
+				5C566BD626827DE00028CD65 /* DetailsView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CAF6EE9260F859900DCB6F4 /* Network.swift in Sources */,
+				5C566BD726827DE00028CD65 /* DetailsView.swift in Sources */,
 				5CAF6EE1260F852100DCB6F4 /* PhotoService.swift in Sources */,
 				5C64CF5225F1207900D88FB5 /* DashboardViewModel.swift in Sources */,
 				5C64CF1D25F1196800D88FB5 /* DashboardView.swift in Sources */,

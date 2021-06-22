@@ -10,7 +10,7 @@ import Kingfisher
 
 struct DashboardView: View {
     
-    @ObservedObject var viewModel = DashboardViewModel()
+    @ObservedObject private var viewModel = DashboardViewModel()
     
     @State private var selectedId: String?
     
@@ -65,28 +65,6 @@ struct ImageOverlay: View {
         .opacity(0.7)
         .cornerRadius(16.0)
         .padding(10)
-    }
-}
-
-struct PhotoInfo: View {
-    
-    @Binding var selectedId: String?
-    
-    let photo: PicsumPhoto
-    
-    var body: some View {
-        KFImage(photo.displayUrl)
-            .resizable()
-            .blur(radius: 20.0)
-            .overlay(
-                KFImage(photo.downloadUrl)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-            )
-            .ignoresSafeArea()
-            .onTapGesture {
-                selectedId = nil
-            }
     }
 }
 
