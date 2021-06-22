@@ -75,9 +75,15 @@ struct PhotoInfo: View {
     let photo: PicsumPhoto
     
     var body: some View {
-        KFImage(photo.downloadUrl)
+        KFImage(photo.displayUrl)
             .resizable()
-            .aspectRatio(contentMode: .fit)
+            .blur(radius: 20.0)
+            .overlay(
+                KFImage(photo.downloadUrl)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+            )
+            .ignoresSafeArea()
             .onTapGesture {
                 selectedId = nil
             }
